@@ -3,6 +3,7 @@ package io.cucumber.pages;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.By;
 
 public class Home extends Page {
 
@@ -16,6 +17,10 @@ public class Home extends Page {
 
   public WebElement getTitle() {
     return title;
+  }
+  public WebElement getLink(String linkText) {
+    String xpath = "//a[normalize-space()='" + linkText + "']";
+    return driver.findElement(By.xpath(xpath));
   }
 
   public void refresh() {
