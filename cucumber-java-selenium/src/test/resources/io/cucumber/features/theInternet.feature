@@ -46,12 +46,12 @@ Feature: The Internet
     And The "Typos" link is displayed
     And The "WYSIWYG Editor" link is displayed
 
-#  @TEST_TI_0001
-#  Scenario: Basic Auth allows validated access
-#    Given the page under test is 'https://the-internet.herokuapp.com'
-#    When the 'Basic Auth' example is opened
-#    And valid credentials are supplied
-#    Then Congratulations should be displayed
+  @TEST_TI_0002
+  Scenario: Basic Auth allows validated access
+    Given the page under test is 'https://the-internet.herokuapp.com'
+    When the "Basic Auth" link is opened
+    And valid credentials "admin" and "admin" are supplied
+    Then Congratulations should be displayed
 #
 #  @TEST_TI_0001
 #  Scenario: Sortable Data Tables - Example 1 displays the expected 4 results

@@ -18,9 +18,14 @@ public class Home extends Page {
   public WebElement getTitle() {
     return title;
   }
+
   public WebElement getLink(String linkText) {
     String xpath = "//a[normalize-space()='" + linkText + "']";
     return driver.findElement(By.xpath(xpath));
+  }
+
+  public void clickLink(String linkText) {
+    getLink(linkText).click();
   }
 
   public void refresh() {
