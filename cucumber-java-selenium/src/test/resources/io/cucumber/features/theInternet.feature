@@ -52,8 +52,9 @@ Feature: The Internet
     When the "Basic Auth" link is opened
     And valid credentials "admin" and "admin" are supplied
     Then Congratulations should be displayed
-#
-#  @TEST_TI_0001
-#  Scenario: Sortable Data Tables - Example 1 displays the expected 4 results
-#    Given the page under test is 'Sortable Data Tables'
-#    And add other steps
+
+  @TEST_TI_0003
+  Scenario: Sortable Data Tables - Example 1 displays the expected 4 results
+    Given the page under test is 'https://the-internet.herokuapp.com'
+    When the "Sortable Data Tables" link is opened
+    Then table displays the following results correctly

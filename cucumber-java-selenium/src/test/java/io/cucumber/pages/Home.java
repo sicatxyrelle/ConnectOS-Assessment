@@ -15,8 +15,15 @@ public class Home extends Page {
   @FindBy(css = "h1")
   private WebElement title;
 
+  @FindBy(xpath = "//*[@id='table1']")
+  private WebElement table;
+
   public WebElement getTitle() {
     return title;
+  }
+
+  public WebElement getTable() {
+    return table;
   }
 
   public WebElement getLink(String linkText) {
